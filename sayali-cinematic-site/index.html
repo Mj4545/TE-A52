@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sayali ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Scene 1: The Meeting -->
+        <div class="scene active" id="scene1">
+            <div class="content-card">
+                <div class="icon">📱</div>
+                <h1>It All Started With a Swipe</h1>
+                <p class="story-text">
+                    I still remember the moment I saw your profile, Sayali. 
+                    There was something different about your smile, something that made me stop scrolling. 
+                    When we matched, my heart skipped a beat. Little did I know, this would be the start of something beautiful.
+                </p>
+                <button class="next-btn" onclick="nextScene(2)">Continue Our Story →</button>
+            </div>
+        </div>
+
+        <!-- Scene 2: The Date -->
+        <div class="scene" id="scene2">
+            <div class="content-card">
+                <div class="icon">🍽️</div>
+                <h1>That Magical Evening</h1>
+                <p class="story-text">
+                    Our dinner date was perfect. The way you laughed at my jokes, 
+                    the way your eyes lit up when you talked about your passions. 
+                    Time seemed to stand still. I felt so connected to you, 
+                    like we had known each other for years. That night, I knew you were special.
+                </p>
+                <button class="next-btn" onclick="nextScene(3)">Keep Reading →</button>
+            </div>
+        </div>
+
+        <!-- Scene 3: What Went Wrong -->
+        <div class="scene" id="scene3">
+            <div class="content-card">
+                <div class="icon">🌧️</div>
+                <h1>When Things Didn't Go As Planned</h1>
+                <p class="story-text">
+                    I know things didn't end the way we hoped that night. 
+                    Those unexpected circumstances were beyond our control, 
+                    but I hate that they left you upset. Seeing you unhappy 
+                    breaks my heart, especially when I wish nothing but joy for you.
+                </p>
+                <button class="next-btn" onclick="nextScene(4)">Read My Heart →</button>
+            </div>
+        </div>
+
+        <!-- Scene 4: The Apology -->
+        <div class="scene" id="scene4">
+            <div class="content-card apology-card">
+                <div class="icon heartbeat">❤️</div>
+                <h1>I'm Truly Sorry, Sayali</h1>
+                <p class="story-text apology-text">
+                    I want to apologize from the bottom of my heart. 
+                    I never wanted our special evening to end with you feeling upset. 
+                    You deserve nothing but happiness, laughter, and beautiful moments. 
+                    Please forgive me for anything that went wrong. 
+                    Your smile means the world to me, and I miss seeing it directed at me.
+                </p>
+                <div class="choice-buttons">
+                    <button class="forgive-btn" onclick="showFinalScene(true)">💕 Give Me Another Chance</button>
+                    <button class="think-btn" onclick="showFinalScene(false)">⏳ I Need Time</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scene 5: Hope -->
+        <div class="scene" id="scene5">
+            <div class="content-card final-card">
+                <div class="icon sparkles">✨</div>
+                <h1 id="finalTitle">Thank You, Sayali! 🎉</h1>
+                <p class="story-text" id="finalText">
+                    Your forgiveness means everything to me. 
+                    I promise to make it up to you with more laughter, 
+                    more beautiful moments, and more reasons to smile. 
+                    Let's create more memories together. 
+                    <br><br>
+                    Can we talk soon? I'd love to hear your voice.
+                </p>
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi,%20I%20saw%20your%20message...%20let's%20talk%20❤" class="whatsapp-btn" target="_blank">
+                    💬 Message Me on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
