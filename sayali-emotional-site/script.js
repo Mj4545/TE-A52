@@ -21,8 +21,26 @@ const frontFlap = document.querySelector('.front-flap');
 const card = document.getElementById('card');
 const envelopeWrapper = document.getElementById('envelope-wrapper');
 const storyContainer = document.getElementById('story-container');
+const backgroundMusic = document.getElementById('background-music');
+const photoFrame = document.getElementById('photo-frame');
 
 envelope.addEventListener('click', function() {
+    // Play background music when envelope is clicked
+    backgroundMusic.volume = 0.5; // Set volume to 50%
+    backgroundMusic.play().catch(error => {
+        console.log("Auto-play was prevented. User needs to interact first.");
+    });
+    
+    // Show photo frame with animation
+    photoFrame.classList.remove('hidden');
+    photoFrame.style.opacity = '0';
+    photoFrame.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+        photoFrame.style.transition = 'all 1s ease';
+        photoFrame.style.opacity = '1';
+        photoFrame.style.transform = 'scale(1)';
+    }, 100);
+    
     // Open envelope animation
     heartSeal.style.transform = 'translate(-50%, -50%) scale(0) rotate(180deg)';
     heartSeal.style.opacity = '0';
@@ -85,7 +103,7 @@ function handleYes() {
     }, 400);
 }
 
-// Handle NO button
+// Handle NO button - Teddy Bear Scene
 function handleNo() {
     const scene5 = document.getElementById('scene5');
     scene5.style.opacity = '0';
@@ -95,14 +113,45 @@ function handleNo() {
         storyContainer.classList.add('hidden');
         document.getElementById('teddy-sad').classList.remove('hidden');
         
-        // Play sad sound effect (optional)
-        // You can add audio here if desired
+        // Make background completely black
+        document.body.style.background = '#000';
+        document.getElementById('hearts-container').style.display = 'none';
+        
+        // Add crying animation intensification
+        const teddyBear = document.querySelector('.teddy-bear');
+        teddyBear.style.animation = 'sob 0.5s infinite';
+        
+        // Create falling tears
+        createTears();
     }, 400);
+}
+
+// Create falling tears effect
+function createTears() {
+    const teddyScene = document.getElementById('teddy-sad');
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            const tear = document.createElement('div');
+            tear.className = 'falling-tear';
+            tear.style.left = (40 + Math.random() * 20) + '%';
+            tear.style.top = '30%';
+            teddyScene.appendChild(tear);
+            
+            setTimeout(() => {
+                tear.remove();
+            }, 2000);
+        }, i * 300);
+    }
 }
 
 // Reset to envelope
 function resetToEnvelope() {
     document.getElementById('teddy-sad').classList.add('hidden');
+    
+    // Restore background
+    document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+    document.getElementById('hearts-container').style.display = 'block';
+    
     envelopeWrapper.style.display = 'block';
     
     // Reset envelope state
@@ -112,6 +161,9 @@ function resetToEnvelope() {
     frontFlap.style.zIndex = '5';
     card.style.transform = 'translateY(0) scale(1)';
     card.style.zIndex = '3';
+    
+    // Hide photo frame
+    photoFrame.classList.add('hidden');
     
     // Reset scenes
     document.querySelectorAll('.scene').forEach(scene => {

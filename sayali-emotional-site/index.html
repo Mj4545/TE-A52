@@ -8,6 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Photo Display Area -->
+    <div class="photo-frame hidden" id="photo-frame">
+        <img src="sayali.jpg" alt="Sayali" id="sayali-photo">
+        <div class="photo-caption">You're beautiful, inside and out ✨</div>
+    </div>
+
     <!-- Floating Hearts Background -->
     <div id="hearts-container"></div>
     
@@ -20,6 +32,7 @@
                 <div class="heart-seal" id="heart-seal">💌</div>
                 <h1>For Sayali</h1>
                 <p>Click to open my heart...</p>
+                <p class="music-note">🎵 Turn up your volume</p>
             </div>
         </div>
     </div>

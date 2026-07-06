@@ -775,3 +775,80 @@ body {
         font-size: 1.1em;
     }
 }
+
+/* Photo Frame Styles */
+.photo-frame {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    transform: rotate(5deg);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.photo-frame.hidden {
+    display: none;
+}
+
+#sayali-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ff6b8a;
+}
+
+.photo-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    color: #764ba2;
+    font-weight: bold;
+}
+
+.music-note {
+    font-size: 0.9em;
+    color: #667eea;
+    margin-top: 5px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Sob animation for teddy bear */
+@keyframes sob {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(0.98) rotate(-2deg); }
+    75% { transform: scale(0.98) rotate(2deg); }
+}
+
+/* Falling tears */
+.falling-tear {
+    position: absolute;
+    width: 8px;
+    height: 15px;
+    background: linear-gradient(to bottom, transparent, #4fc3f7);
+    border-radius: 50%;
+    animation: fall-down 2s linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes fall-down {
+    0% {
+        transform: translateY(0) scaleY(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(400px) scaleY(1.2);
+        opacity: 0;
+    }
+}
