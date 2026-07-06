@@ -748,6 +748,8 @@ body {
     .scene {
         padding: 30px 20px;
         width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
     }
     
     .scene h2 {
@@ -756,6 +758,7 @@ body {
     
     .story-text {
         font-size: 1em;
+        line-height: 1.6;
     }
     
     .teddy-bear {
@@ -773,6 +776,54 @@ body {
     .whatsapp-btn {
         padding: 15px 30px;
         font-size: 1.1em;
+    }
+    
+    /* Better mobile button layout */
+    .choice-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .next-btn, .yes-btn, .no-btn, .retry-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .envelope-wrapper {
+        transform: scale(0.75);
+        margin-top: -30px;
+    }
+    
+    .scene-content {
+        padding: 1.5rem;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .photo-frame {
+        width: 150px;
+        height: 180px;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+    }
+    
+    #sayali-photo {
+        width: 130px;
+        height: 160px;
+    }
+    
+    .teddy-container {
+        transform: scale(0.7);
+    }
+    
+    .sad-message {
+        font-size: 1.1em;
+        padding: 0 20px;
     }
 }
 
