@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sayali ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div id="hearts-container"></div>
+    
+    <!-- Envelope Container -->
+    <div class="envelope-wrapper" id="envelope-wrapper">
+        <div class="envelope" id="envelope">
+            <div class="front-flap"></div>
+            <div class="back-flap"></div>
+            <div class="card" id="card">
+                <div class="heart-seal" id="heart-seal">💌</div>
+                <h1>For Sayali</h1>
+                <p>Click to open my heart...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Container (Hidden initially) -->
+    <div class="story-container hidden" id="story-container">
+        <!-- Scene 1: How we met -->
+        <div class="scene active" id="scene1">
+            <div class="content">
+                <div class="icon">📱</div>
+                <h2>It all started with a swipe...</h2>
+                <p class="story-text">
+                    Hey Sayali,<br><br>
+                    Remember that day on the dating app? When I saw your profile, something felt different. 
+                    Your smile caught me off guard, and I knew I had to say hi. 
+                    That simple "Hello" changed everything for me.
+                </p>
+                <button class="next-btn" onclick="nextScene(2)">Continue ➝</button>
+            </div>
+        </div>
+
+        <!-- Scene 2: The Date -->
+        <div class="scene" id="scene2">
+            <div class="content">
+                <div class="icon">🍽️✨</div>
+                <h2>Our Beautiful Dinner</h2>
+                <p class="story-text">
+                    That dinner date was magical. The way you laughed at my silly jokes, 
+                    the way your eyes lit up when you talked about your dreams... 
+                    Time just stopped. For those few hours, it felt like the world only had us in it.
+                </p>
+                <button class="next-btn" onclick="nextScene(3)">Continue ➝</button>
+            </div>
+        </div>
+
+        <!-- Scene 3: What Went Wrong -->
+        <div class="scene" id="scene3">
+            <div class="content">
+                <div class="icon">🌧️</div>
+                <h2>When Things Went Wrong</h2>
+                <p class="story-text">
+                    But then, life happened. Unforeseen circumstances came crashing down, 
+                    and I couldn't be the person you deserved in that moment. 
+                    Seeing you upset broke my heart into a million pieces. 
+                    I hate that I caused you pain, even if unintentionally.
+                </p>
+                <button class="next-btn" onclick="nextScene(4)">Continue ➝</button>
+            </div>
+        </div>
+
+        <!-- Scene 4: The Apology -->
+        <div class="scene" id="scene4">
+            <div class="content">
+                <div class="icon">💔</div>
+                <h2>I'm So Sorry, Sayali</h2>
+                <p class="story-text emotional">
+                    From the bottom of my heart, I am truly sorry.<br><br>
+                    You deserve nothing but happiness, laughter, and someone who cherishes every moment with you. 
+                    I never wanted to be the reason for your tears. 
+                    Please forgive me for not being there when you needed me most.
+                </p>
+                <div class="tear-drop"></div>
+                <button class="next-btn" onclick="nextScene(5)">Read More ➝</button>
+            </div>
+        </div>
+
+        <!-- Scene 5: The Question -->
+        <div class="scene" id="scene5">
+            <div class="content">
+                <div class="icon">🤞</div>
+                <h2>Can We Try Again?</h2>
+                <p class="story-text">
+                    I know I can't change what happened, but I promise to do better. 
+                    To be better. For you.<br><br>
+                    Will you give me another chance to make you smile again?
+                </p>
+                
+                <div class="choice-buttons">
+                    <button class="yes-btn" onclick="handleYes()">
+                        <span class="btn-icon">❤️</span> Yes, I forgive you
+                    </button>
+                    <button class="no-btn" onclick="handleNo()">
+                        <span class="btn-icon">💔</span> Not yet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teddy Bear Sad Scene (Hidden) -->
+    <div class="teddy-scene hidden" id="teddy-sad">
+        <div class="dark-overlay"></div>
+        <div class="teddy-container sad">
+            <div class="teddy-bear">
+                <div class="head">
+                    <div class="ear left"></div>
+                    <div class="ear right"></div>
+                    <div class="face">
+                        <div class="eye left">
+                            <div class="tear"></div>
+                        </div>
+                        <div class="eye right">
+                            <div class="tear"></div>
+                        </div>
+                        <div class="nose"></div>
+                        <div class="mouth sad"></div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="arm left"></div>
+                    <div class="arm right"></div>
+                    <div class="heart broken"></div>
+                </div>
+            </div>
+            <p class="sad-message">I understand... I'll wait forever if I have to. 💔</p>
+            <button class="retry-btn" onclick="resetToEnvelope()">Let me try again</button>
+        </div>
+    </div>
+
+    <!-- Celebration Scene (Hidden) -->
+    <div class="celebration-scene hidden" id="celebration">
+        <div class="confetti-container" id="confetti-container"></div>
+        <div class="celebration-content">
+            <h1>Thank You, Sayali! 🎉</h1>
+            <p class="celebration-text">
+                You just made me the happiest person alive!<br>
+                I promise to never let you down again.<br>
+                Let's create more beautiful memories together! ❤️
+            </p>
+            <div class="whatsapp-btn-container">
+                <a href="#" class="whatsapp-btn" id="whatsapp-link" target="_blank">
+                    <span class="wa-icon">📱</span> Message me on WhatsApp
+                </a>
+            </div>
+            <div class="floating-hearts-celebration">
+                <span>❤️</span><span>💕</span><span>💖</span><span>💗</span><span>💓</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
