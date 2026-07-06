@@ -1,13 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sayali-apology</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sayali ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Hearts Background -->
+        <div class="hearts-container" id="heartsContainer"></div>
+        
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <!-- Story Sections -->
+        <div class="story-container" id="storyContainer">
+            
+            <!-- Section 1: How We Met -->
+            <section class="story-section active" data-section="1">
+                <div class="content-wrapper">
+                    <div class="icon-container">
+                        <svg class="floating-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h1 class="section-title fade-in">It All Started With A Swipe</h1>
+                    <p class="section-text fade-in-delay">
+                        Hey Sayali, do you remember that day? Two strangers on a dating app, 
+                        profiles scrolling by, until suddenly... there you were. Something made me stop. 
+                        Your smile, your eyes, or maybe it was fate itself guiding my finger to pause. 
+                        I took a chance and swiped right, never knowing that this simple gesture would 
+                        lead me to someone so special.
+                    </p>
+                </div>
+                <button class="next-btn" onclick="nextSection()">Continue Our Story →</button>
+            </section>
+            
+            <!-- Section 2: The Dinner Date -->
+            <section class="story-section" data-section="2">
+                <div class="content-wrapper">
+                    <div class="icon-container">
+                        <svg class="floating-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+                        </svg>
+                    </div>
+                    <h1 class="section-title">That Magical Evening</h1>
+                    <p class="section-text">
+                        Our first dinner date felt like a scene from a movie. The soft lighting, 
+                        the gentle music in the background, but honestly, all I could focus on was you. 
+                        Your laughter lit up the entire restaurant. Every story you shared, every smile, 
+                        every moment of connection made my heart skip a beat. Time seemed to stand still 
+                        as we talked about everything and nothing. It was perfect.
+                    </p>
+                </div>
+                <button class="next-btn" onclick="nextSection()">Keep Going →</button>
+            </section>
+            
+            <!-- Section 3: What Went Wrong -->
+            <section class="story-section" data-section="3">
+                <div class="content-wrapper">
+                    <div class="icon-container">
+                        <svg class="floating-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h1 class="section-title">When Things Took A Turn</h1>
+                    <p class="section-text">
+                        But then, life happened. Unforeseen circumstances beyond our control created 
+                        a storm that neither of us expected. I saw the hurt in your eyes, the disappointment, 
+                        and it broke my heart. You didn't deserve any of that. Sometimes life throws us 
+                        curveballs when we least expect them, but that doesn't excuse the pain caused. 
+                        I wish I could go back and change what happened.
+                    </p>
+                </div>
+                <button class="next-btn" onclick="nextSection()">Read My Heart →</button>
+            </section>
+            
+            <!-- Section 4: The Apology -->
+            <section class="story-section" data-section="4">
+                <div class="content-wrapper">
+                    <div class="icon-container">
+                        <svg class="floating-icon heartbeat" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h1 class="section-title">I'm So Sorry, Sayali</h1>
+                    <p class="section-text apology-text">
+                        From the bottom of my heart, I am truly sorry. Sorry for the pain, 
+                        sorry for the disappointment, sorry for not being able to prevent what happened. 
+                        You mean so much to me, and seeing you upset because of circumstances 
+                        I couldn't control hurts more than words can express.<br><br>
+                        You deserve nothing but happiness, love, and beautiful moments. 
+                        I never wanted to be part of anything that would dim your light. 
+                        Please know that this was never about you – you are amazing, 
+                        kind, beautiful, and deserving of all the good things in this world.
+                    </p>
+                </div>
+                <button class="next-btn" onclick="nextSection()">One Last Thing →</button>
+            </section>
+            
+            <!-- Section 5: Hope & Request -->
+            <section class="story-section" data-section="5">
+                <div class="content-wrapper">
+                    <div class="icon-container">
+                        <svg class="floating-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h1 class="section-title">Will You Give Me Another Chance?</h1>
+                    <p class="section-text final-text">
+                        I know I can't change the past, but I hope you'll let me make it up to you. 
+                        One dinner date wasn't enough to explore all the stories we could share, 
+                        all the laughter we could create together.<br><br>
+                        Would you be willing to talk again? To give us another chance to see 
+                        where this connection might lead?<br><br>
+                        <strong style="font-size: 1.3em; color: #ff4757;">Sayali, you're extraordinary, and I'd be honored to know you better.</strong>
+                    </p>
+                    <div class="choice-buttons">
+                        <button class="yes-btn" onclick="acceptApology()">Yes, Let's Talk ❤️</button>
+                        <button class="maybe-btn" onclick="showContact()">Maybe Later</button>
+                    </div>
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        <div class="confetti" id="confetti"></div>
+                        <h2>Thank You! 🎉</h2>
+                        <p>I promise to make it worth your while!</p>
+                        <a href="https://wa.me/919876543210?text=Hi!%20I%20saw%20your%20message.%20Let's%20talk%20😊" class="whatsapp-btn" target="_blank">
+                            Message Me on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="nav-dots" id="navDots"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>
