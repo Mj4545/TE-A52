@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Hearts Background */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff6b9d;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff4081;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ff6b9d;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff4081;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-placeholder {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.photo-card p {
+    color: #ff6b9d;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Reasons Section */
+.reasons-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.reason-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.reason-card h3 {
+    color: #ff4081;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reason-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Apology Section */
+.apology-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.apology-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 3px solid #ffecd2;
+}
+
+.apology-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff4081;
+    margin-bottom: 30px;
+}
+
+.apology-content {
+    margin-bottom: 30px;
+}
+
+.apology-message {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.apology-signature {
+    font-size: 1.2rem;
+    color: #ff6b9d;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.signature-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #ff4081;
+}
+
+.forgive-btn {
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff4081 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.forgive-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 64, 129, 0.4);
+}
+
+.forgiveness-message {
+    display: none;
+    margin-top: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
+    border-radius: 15px;
+    border: 2px dashed #ff6b9d;
+}
+
+.forgiveness-message h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff4081;
+    margin-bottom: 15px;
+}
+
+.forgiveness-message p {
+    font-size: 1.2rem;
+    color: #ff6b9d;
+    line-height: 1.6;
+}
+
+/* Quote Section */
+.quote-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.friendship-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ff4081;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.quote-author {
+    color: #ff6b9d;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #ff6b9d;
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-note {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .apology-card {
+        padding: 30px 20px;
+    }
+    
+    .apology-title {
+        font-size: 2rem;
+    }
+    
+    .photo-gallery,
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
